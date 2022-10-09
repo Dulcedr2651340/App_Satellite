@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="30dp"
+    android:background="@drawable/fondo4"
+    tools:context=".editModule.DetailFragment">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvSongAlbumDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:text="@string/song_album"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/common_padding_max"
+            android:backgroundTint="@color/color1"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="8dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSongAlbumDetail">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgSongDetail"
+                android:layout_width="185dp"
+                android:layout_height="185dp"
+                android:layout_gravity="center"
+                android:elevation="0dp"
+                android:src="@drawable/ic_song" />
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/tvSongNameDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:text="@string/song_name"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardImage" />
+
+        <TextView
+            android:id="@+id/tvSongArtistDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:text="@string/song_artist"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSongNameDetail" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cdSongFavoriteDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_max"
+            android:button="@drawable/favorite_state"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardImage" />
+
+        <TextView
+            android:id="@+id/tvDurationDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:text="00:00"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/piDuration" />
+
+        <TextView
+            android:id="@+id/tvSongDurationDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:text="@string/song_duration"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/piDuration" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/piDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:iconTint="@color/black"
+            android:layout_marginTop="@dimen/common_padding_max_max"
+            app:layout_constraintTop_toBottomOf="@+id/tvSongArtistDetail" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/piDuration">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:icon="@drawable/ic_random_song"
+                app:iconTint="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:icon="@drawable/ic_prev_song"
+                app:iconTint="@color/black" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:src="@drawable/ic_play_song"
+                android:tint="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:icon="@drawable/ic_next_song"
+                app:iconTint="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:icon="@drawable/ic_repeat_song"
+                app:iconTint="@color/black" />
+        </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

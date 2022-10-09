@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Satellite</string>
+
+    <string name="title_home">Songs</string>
+    <string name="song_name">The Spectre</string>
+    <string name="song_duration">05:09</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_add_song">New Song</string>
+    <string name="name">Name</string>
+    <string name="artist">Artist</string>
+    <string name="album">Album</string>
+    <string name="duration">Duration</string>
+    <string name="type">Type</string>
+    <string name="save">Save Song</string>
+    <string name="title_new_song">New Song</string>
+    <string name="image">Url Image</string>
+    <string name="song_artist">Alan Walker</string>
+    <string name="song_album">Spectre</string>
+    <string name="title_song_detail">Play Song</string>
+    <string name="title_favorite">Favorite</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="btn_login">Log in</string>
+    <string name="btn_register">Sign up free</string>
+    <string name="title_add_gender">New Gender</string>
+    <string name="description">Description</string>
+    <string name="url_image">Url Image</string>
+    <string name="save_gender">Save Gender</string>
+    <string name="video">Url video</string>
+    <string name="title_help">Help</string>
+    <string name="message_help">You will contact technical support, do you want to continue?</string>
+    <string name="positive">Yes</string>
+    <string name="negative">No</string>
+</resources>

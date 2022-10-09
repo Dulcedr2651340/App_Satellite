@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    android:background="@color/black"
+    tools:context=".editModule.SongFragment">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTitleNewPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/title_add_song"
+                android:textColor="@color/color1"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSongName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:hint="@string/name"
+                app:hintTextColor="@color/color1"
+                app:startIconTint="@color/color1"
+                app:endIconTint="@color/color1"
+                android:textColorHint="@color/color1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:endIconMode="clear_text"
+                app:boxBackgroundColor="@color/bg_field"
+                app:layout_constraintBottom_toTopOf="@+id/tilSongArtist"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleNewPhone"
+                app:startIconDrawable="@drawable/ic_song"
+                app:boxCornerRadiusTopEnd="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomStart="@dimen/common_padding_min"
+                app:boxCornerRadiusTopStart="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomEnd="@dimen/common_padding_min"
+                app:boxStrokeColor="@color/color1">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSongName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/color1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSongArtist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_min"
+                android:hint="@string/artist"
+                app:endIconMode="clear_text"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:layout_constraintBottom_toTopOf="@+id/tilSongAlbum"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilSongName"
+                app:startIconDrawable="@drawable/ic_artist"
+                app:hintTextColor="@color/color1"
+                app:startIconTint="@color/color1"
+                app:endIconTint="@color/color1"
+                android:textColorHint="@color/color1"
+                app:boxBackgroundColor="@color/bg_field"
+                app:boxCornerRadiusTopEnd="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomStart="@dimen/common_padding_min"
+                app:boxCornerRadiusTopStart="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomEnd="@dimen/common_padding_min"
+                app:boxStrokeColor="@color/color1"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSongArtist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/color1"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSongAlbum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_min"
+                android:hint="@string/album"
+                app:endIconMode="clear_text"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:layout_constraintBottom_toTopOf="@+id/tilSongDuration"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilSongArtist"
+                app:startIconDrawable="@drawable/ic_album"
+                app:hintTextColor="@color/color1"
+                app:startIconTint="@color/color1"
+                app:endIconTint="@color/color1"
+                android:textColorHint="@color/color1"
+                app:boxBackgroundColor="@color/bg_field"
+                app:boxCornerRadiusTopEnd="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomStart="@dimen/common_padding_min"
+                app:boxCornerRadiusTopStart="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomEnd="@dimen/common_padding_min"
+                app:boxStrokeColor="@color/color1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSongAlbum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/color1"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSongDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/duration"
+                app:endIconMode="clear_text"
+                android:layout_marginTop="@dimen/common_padding_min"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:layout_constraintBottom_toTopOf="@+id/tilSongType"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilSongAlbum"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:startIconDrawable="@drawable/ic_duration"
+                app:hintTextColor="@color/color1"
+                app:startIconTint="@color/color1"
+                app:endIconTint="@color/color1"
+                android:textColorHint="@color/color1"
+                app:boxBackgroundColor="@color/bg_field"
+                app:boxCornerRadiusTopEnd="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomStart="@dimen/common_padding_min"
+                app:boxCornerRadiusTopStart="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomEnd="@dimen/common_padding_min"
+                app:boxStrokeColor="@color/color1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSongDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/color1"
+                    android:inputType="time" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSongType"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/ic_gender"
+                android:elevation="10dp"
+                android:layout_marginTop="@dimen/common_padding_min"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilSongDuration"
+                app:layout_constraintBottom_toTopOf="@+id/tilSongVideo"
+                app:hintTextColor="@color/color1"
+                app:startIconTint="@color/color1"
+                app:endIconTint="@color/color1"
+                android:textColorHint="@color/color1"
+                app:boxBackgroundColor="@color/bg_field"
+                app:boxCornerRadiusTopEnd="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomStart="@dimen/common_padding_min"
+                app:boxCornerRadiusTopStart="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomEnd="@dimen/common_padding_min"
+                app:boxStrokeColor="@color/color1">
+                <AutoCompleteTextView
+                    android:id="@+id/actvGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:inputType="none"
+                    android:hint="Select a Gender"
+                    android:textColor="@color/color1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSongVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_min"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:hint="@string/video"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilSongType"
+                app:startIconDrawable="@drawable/ic_link"
+                app:hintTextColor="@color/color1"
+                app:startIconTint="@color/color1"
+                app:endIconTint="@color/color1"
+                android:textColorHint="@color/color1"
+                app:boxBackgroundColor="@color/bg_field"
+                app:boxCornerRadiusTopEnd="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomStart="@dimen/common_padding_min"
+                app:boxCornerRadiusTopStart="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomEnd="@dimen/common_padding_min"
+                app:boxStrokeColor="@color/color1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSongVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:textColor="@color/color1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintTop_toBottomOf="@+id/tilSongImage" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSongImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_min"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:hint="@string/image"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilSongVideo"
+                app:startIconDrawable="@drawable/ic_link"
+                app:hintTextColor="@color/color1"
+                app:startIconTint="@color/color1"
+                app:endIconTint="@color/color1"
+                android:textColorHint="@color/color1"
+                app:boxBackgroundColor="@color/bg_field"
+                app:boxCornerRadiusTopEnd="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomStart="@dimen/common_padding_min"
+                app:boxCornerRadiusTopStart="@dimen/common_padding_min"
+                app:boxCornerRadiusBottomEnd="@dimen/common_padding_min"
+                app:boxStrokeColor="@color/color1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSongImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:textColor="@color/color1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintTop_toBottomOf="@+id/tilSongImage" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveSong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_margin="20dp"
+                android:backgroundTint="@color/bg_button"
+                app:layout_constraintTop_toBottomOf="@+id/tilSongImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

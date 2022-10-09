@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="@dimen/common_padding_max_max"
+    android:paddingHorizontal="@dimen/common_padding_middle"
+    android:background="@drawable/font"
+    tools:context=".fragments.SessionActivity">
+
+    <TextView
+        android:id="@+id/tvTitleLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="Ingresar"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="30dp"
+        android:text="¿Cual es tu email?"
+        android:textColor="@color/color1"
+        android:textStyle="bold"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleLogin"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilUserEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        app:boxStrokeWidth="0dp"
+        app:boxBackgroundColor="@color/input_background"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/color1"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/color1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="30dp"
+        android:text="¿Cual es tu contraseña?"
+        android:textColor="@color/color1"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/common_padding_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilUserEmail"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilUserPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        app:boxBackgroundColor="@color/input_background"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/color1"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtUserPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="listo"
+        android:width="200dp"
+        android:textColor="@color/color1"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tilUserPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/button_shape"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

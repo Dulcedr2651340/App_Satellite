@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/itemEditSong"
+        android:title="Edit"
+        android:icon="@drawable/ic_edit"
+        android:iconTint="@color/color1"
+        app:showAsAction="withText"
+        />
+    <item
+        android:id="@+id/itemDeleteSong"
+        android:title="Delete"
+        android:iconTint="@color/color1"
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="withText"
+        />
+</menu>
+
